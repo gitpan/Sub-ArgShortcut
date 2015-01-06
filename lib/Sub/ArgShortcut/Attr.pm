@@ -1,9 +1,9 @@
-#!/usr/bin/perl -T
+use 5.006;
 use strict;
 use warnings;
 
 package Sub::ArgShortcut::Attr;
-
+$Sub::ArgShortcut::Attr::VERSION = '1.021';
 use Sub::ArgShortcut;
 use Attribute::Handlers;
 

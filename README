@@ -1,28 +1,31 @@
-Sub-ArgShortcut version 1.02
+Sub::ArgShortcut
 
-This module encapsulates the logic required for functions that use default
-arguments, as many core Perl functions do. You only need to write code which
-modifies the elements of @_ in-place. This module will then layer the following
-two behaviours on top of your code:
-
-* If no arguments are given, the function will use C<$_> as its input.
-* If no return value is expected, it will modify its arguments in-place.
-
+This module encapsulates the logic required for functions that assume $_
+as their argument when called with an empty argument list, and which
+modify their arguments in void context but return modified copies in any
+other context. You only need to write code which modifies the elements
+of @_ in-place.
 
 INSTALLATION
 
-To install this module, run the following commands:
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-    perl Build.PL
-    ./Build
-    ./Build test
-    ./Build install
+  cpanm .
+  cpan  .
+  cpanp -i .
 
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
+  perl Makefile.PL
+  make
+  make test
+  make install
 
-COPYRIGHT AND LICENCE
+COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2008, Aristotle Pagaltzis
+This software is copyright (c) 2015 by Aristotle Pagaltzis.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
